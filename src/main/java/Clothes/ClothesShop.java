@@ -1,6 +1,6 @@
 package Clothes;
 
-public class ClothesShop {
+public abstract class ClothesShop {
 
     private String name;
     private String season;
