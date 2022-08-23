@@ -15,7 +15,29 @@ public class Tshirt extends ClothingItem {
     }
 
 //    getters and setters
+public String getColour() {
+    return colour;
+}
 
+    public void setColour (String colour) {
+        this.colour = colour;
+    }
+
+    public String getNeckline() {
+        return neckline;
+    }
+
+    public void setNeckline(String neckline) {
+        this.neckline = neckline;
+    }
+
+    public String getStockImage() {
+        return stockImage;
+    }
+
+    public void setStockImage(String stockImage) {
+        this.stockImage = stockImage;
+    }
 
 
 //method to add image to tshirt
