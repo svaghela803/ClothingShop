@@ -1,12 +1,12 @@
 package Clothes;
 
-public abstract class ClothesShop {
+public abstract class ClothingItem {
 
     private String name;
     private String season;
 
 //    constructor
-    public ClothesShop(String name){
+    public ClothingItem(String name){
         this.name = name;
         this.season = season;
     }
