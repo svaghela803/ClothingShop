@@ -4,11 +4,13 @@ public class Trouser extends ClothingItem {
 
     private String fastening;
     private double legLength;
+    private double cutAmount;
 
 //constructor
     public Trouser(String name) {
         super(name);
         this.legLength = legLength;
+        this.cutAmount = cutAmount;
     }
 
 //    getters and setters
@@ -17,10 +19,25 @@ public class Trouser extends ClothingItem {
         return legLength;
     }
 
-    public void setColour (double legLength) {
+    public void setLegLength (double legLength) {
         this.legLength = legLength;
     }
 
-//    method
+    public double getCutAmount() {
+        return cutAmount;
+    }
+
+    public void setCutAmount (double cutAmount) {
+        this.cutAmount = cutAmount;
+    }
+
+
+    //    method to calculate hemming (length of trousers minus amount to be cut)
+    public void hemming(){
+        double hemming;
+        hemming = legLength - cutAmount;
+        return;
+    }
+    
 
 }
