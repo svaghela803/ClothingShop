@@ -3,7 +3,7 @@ package Clothes;
 public class Jacket extends ClothingItem {
 
     public Jacket(String name) {
-        super(name);
+        super(name, stock);
     }
 
     boolean hood;
@@ -12,17 +12,17 @@ public class Jacket extends ClothingItem {
 //constructor
 
     public Jacket(boolean hood, String fastening) {
-        super(fastening);
+        super(fastening, stock);
         this.hood = hood;
         this.fastening = fastening;
     }
 
 //    getters and setters
 
-    public boolean gethood() {
+    public boolean getHood() {
         return hood;
     }
-    public void sethood (boolean hood) {
+    public void setHood (boolean hood) {
         this.hood = hood;
     }
 
@@ -32,6 +32,11 @@ public class Jacket extends ClothingItem {
 
     public void setFastening (String fastening) {
         this.fastening = fastening;
+    }
+
+//    method to add waterproofing
+    public void addWaterproofing(){
+        return;
     }
 
     }

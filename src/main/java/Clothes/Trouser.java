@@ -8,7 +8,7 @@ public class Trouser extends ClothingItem {
 
 //constructor
     public Trouser(String name) {
-        super(name);
+        super(name, stock);
         this.legLength = legLength;
         this.cutAmount = cutAmount;
     }
@@ -38,6 +38,6 @@ public class Trouser extends ClothingItem {
         hemming = legLength - cutAmount;
         return;
     }
-    
+
 
 }

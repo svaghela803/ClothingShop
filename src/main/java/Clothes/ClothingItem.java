@@ -1,5 +1,7 @@
 package Clothes;
 
+import java.util.ArrayList;
+
 public abstract class ClothingItem {
 
     private String name;
@@ -8,17 +10,26 @@ public abstract class ClothingItem {
     private int size;
     private double sellPrice;
 
+    private ArrayList<ClothingItem> stock;
+
 
 //    constructor
-    public ClothingItem(String name){
+    public ClothingItem(String name, ArrayList<ClothingItem> stock){
         this.name = name;
+        this.stock = collection;
         this.season = season;
         this.material = material;
         this.sellPrice = sellPrice;
         this.size = size;
     }
 
-//    getters and setters
+//    method to count stock
+    public int stock(){
+    return this.stock.size();
+}
+
+
+    //    getters and setters
     public String getName() {
         return name;
     }
@@ -59,6 +70,13 @@ public abstract class ClothingItem {
         this.sellPrice = sellPrice;
     }
 
+    public ArrayList<ClothingItem> getStock() {
+        return stock;
+    }
+
+    public void setCustomerArtwork(ArrayList<ClothingItem> stock) {
+        this.stock = stock;
+    }
 
 
 }
