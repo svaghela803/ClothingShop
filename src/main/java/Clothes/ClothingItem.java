@@ -10,23 +10,35 @@ public abstract class ClothingItem {
     private int size;
     private double sellPrice;
 
+    private double cost;
+
     private ArrayList<ClothingItem> stock;
 
 
 //    constructor
-    public ClothingItem(String name, ArrayList<ClothingItem> stock){
+    public ClothingItem(String name, String season, String material, double sellPrice, int size, double cost){
+        this.cost = cost;
         this.name = name;
-        this.stock = collection;
         this.season = season;
         this.material = material;
         this.sellPrice = sellPrice;
         this.size = size;
     }
 
-//    method to count stock
+    public ClothingItem(String colour) {
+    }
+
+    //    method to count stock
     public int stock(){
     return this.stock.size();
 }
+
+//calculate margin
+public double calculateMargin(){
+    double margin = this.sellPrice - this.cost;
+    return margin;
+}
+
 
 
     //    getters and setters

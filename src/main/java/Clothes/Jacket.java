@@ -2,19 +2,25 @@ package Clothes;
 
 public class Jacket extends ClothingItem {
 
-    public Jacket(String name) {
-        super(name, stock);
-    }
 
     boolean hood;
     String fastening;
 
+    private boolean waterproof;
+
 //constructor
 
-    public Jacket(boolean hood, String fastening) {
-        super(fastening, stock);
+
+    public Jacket(String name, String season, String material, double sellPrice, int size, double cost) {
+        super(name, season, material, sellPrice, size, cost);
         this.hood = hood;
         this.fastening = fastening;
+        this.waterproof = false;
+    }
+
+    //methods
+    public void addWaterproofing() {
+        setWaterproof(true);
     }
 
 //    getters and setters
@@ -22,7 +28,8 @@ public class Jacket extends ClothingItem {
     public boolean getHood() {
         return hood;
     }
-    public void setHood (boolean hood) {
+
+    public void setHood(boolean hood) {
         this.hood = hood;
     }
 
@@ -30,14 +37,21 @@ public class Jacket extends ClothingItem {
         return fastening;
     }
 
-    public void setFastening (String fastening) {
+    public void setFastening(String fastening) {
         this.fastening = fastening;
     }
 
-//    method to add waterproofing
-    public void addWaterproofing(){
-        return;
+    public boolean isHood() {
+        return hood;
     }
 
+    public boolean isWaterproof() {
+        return waterproof;
     }
+
+    public void setWaterproof(boolean waterproof) {
+        this.waterproof = waterproof;
+    }
+}
+
 
